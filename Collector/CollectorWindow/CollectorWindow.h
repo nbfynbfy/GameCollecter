@@ -19,9 +19,9 @@ public:
     }
 
 private slots:
-    void ExitWindow();
-    void SelectGame();
-    void ShowBeginWidget();
+    void BeginWidgetExitWindow();
+    void BeginWidgetToSelectGameWidget();
+    void SelectGameWidgetToBeginWidget();
 
 private:
     void Init();

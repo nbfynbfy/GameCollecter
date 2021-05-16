@@ -80,7 +80,6 @@ void BeginWidget::OnClickExitButton() {
 
 void BeginWidget::OnClickSelectButton() {
     emit ClickSelectButton();
-    this->hide();
 }
     
 } // namespace game_collector
