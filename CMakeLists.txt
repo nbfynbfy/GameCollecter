@@ -12,10 +12,14 @@ find_package(Qt5 COMPONENTS Widgets)
 # add QT5
 
 set(INCLUDES Games)
-set(INCLUDES ${INCLUDES} Collector)
+set(INCLUDES ${INCLUDES} Collector/CollectorWindow)
 
 aux_source_directory(Games  SRCS)
-aux_source_directory(Collector  SRCS)
+aux_source_directory(Collector/CollectorWindow  SRCS)
+
+include_directories(${INCLUDES})
+
+link_directories(${INCLUDES})
 
 add_executable(GameCollector main.cpp ${SRCS})
 
