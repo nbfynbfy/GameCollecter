@@ -3,6 +3,10 @@
 //
 
 #include "QMainWindow"
+#include "QLabel"
+#include "QPushButton"
+#include "GameConstData.h"
+#include "iostream"
 
 #ifndef GAMECOLLECTOR_COLLECTORWINDOW_H
 #define GAMECOLLECTOR_COLLECTORWINDOW_H
@@ -18,7 +22,18 @@ public:
 private:
     void Init();
     void InitSize();
+    void InitTittle();
+    void InitLabel();
+    void InitTitleLabel();
+    void InitButton();
+    void InitSelectButton();
+    void InitSettingButton();
+    void InitExitButton();
 
+    QLabel title_label_;
+    QPushButton select_button_;
+    QPushButton setting_button_;
+    QPushButton exit_button_;
 };
 
 }; // namespace game_collector
