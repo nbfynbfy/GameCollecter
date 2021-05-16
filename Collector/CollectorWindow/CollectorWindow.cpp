@@ -23,6 +23,7 @@ void CollectorWindow::InitWidget() {
 void CollectorWindow::InitBeginWidget() {
     begin_widget_.setParent(this);
     connect(&begin_widget_, &BeginWidget::ClickExitButton, this, &CollectorWindow::ExitWindow);
+    connect(&begin_widget_, &BeginWidget::ClickSelectButton, this, &CollectorWindow::SelectGame);
     begin_widget_.show();
 }
 
@@ -37,6 +38,10 @@ void CollectorWindow::ShowBeginWidget() {
 
 void CollectorWindow::ExitWindow() {
     this->close();
+}
+
+void CollectorWindow::SelectGame() {
+    select_game_widget_.show();
 }
 
 } // namespace game_collector

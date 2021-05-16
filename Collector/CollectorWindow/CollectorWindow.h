@@ -20,6 +20,7 @@ public:
 
 private slots:
     void ExitWindow();
+    void SelectGame();
     void ShowBeginWidget();
 
 private:

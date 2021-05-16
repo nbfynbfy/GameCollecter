@@ -61,6 +61,7 @@ void BeginWidget::InitSettingButton() {
     setting_button_.setGeometry((this->width() - collector_window_settingbutton_width) / 2,
                                 select_button_.y() + select_button_.height() + collector_window_button_interval,
                                 collector_window_settingbutton_width, collector_window_settingbutton_height);
+    connect(&select_button_, &QPushButton::clicked, this, &game_collector::BeginWidget::OnClickSelectButton);
 }
 
 void BeginWidget::InitExitButton() {
@@ -77,5 +78,9 @@ void BeginWidget::OnClickExitButton() {
     emit ClickExitButton();
 }
 
+void BeginWidget::OnClickSelectButton() {
+    emit ClickSelectButton();
+    this->hide();
+}
     
 } // namespace game_collector

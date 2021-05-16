@@ -5,6 +5,7 @@
 #include "QWidget"
 #include "GameConstData.h"
 #include "QPushButton"
+#include "QLabel"
 
 #ifndef GAMECOLLECTOR_SELECTGAMEWIDGET_H
 #define GAMECOLLECTOR_SELECTGAMEWIDGET_H
@@ -21,10 +22,14 @@ public:
 private:
     void Init();
     void InitSize();
+    void InitLabel();
+    void InitTitleLabel();
     void InitButton();
     void InitReturnButton();
 
+
     QPushButton return_button_;
+    QLabel title_label_;
 };
 
 } // namespace game_collector

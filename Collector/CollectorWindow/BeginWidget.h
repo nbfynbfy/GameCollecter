@@ -22,9 +22,11 @@ public:
 
 signals:
     void ClickExitButton();
+    void ClickSelectButton();
 
 private slots:
     void OnClickExitButton();
+    void OnClickSelectButton();
 
 private:
     void Init();
