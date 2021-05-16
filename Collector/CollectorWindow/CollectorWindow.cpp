@@ -17,14 +17,25 @@ void CollectorWindow::InitSize() {
 
 void CollectorWindow::InitWidget() {
     InitBeginWidget();
+    InitSelectGameWidget();
 }
 
 void CollectorWindow::InitBeginWidget() {
     begin_widget_.setParent(this);
-    connect(begin_widget_.GetExitButton(), &QPushButton::clicked, this, &CollectorWindow::OnClickExitButton);
+    connect(&begin_widget_, &BeginWidget::ClickExitButton, this, &CollectorWindow::ExitWindow);
+    begin_widget_.show();
 }
 
-void CollectorWindow::OnClickExitButton() {
+void CollectorWindow::InitSelectGameWidget() {
+    select_game_widget_.setParent(this);
+    select_game_widget_.hide();
+}
+
+void CollectorWindow::ShowBeginWidget() {
+    begin_widget_.show();
+}
+
+void CollectorWindow::ExitWindow() {
     this->close();
 }
 

@@ -70,6 +70,11 @@ void BeginWidget::InitExitButton() {
     exit_button_.setGeometry((this->width() - collector_window_exitbutton_width) / 2,
                              setting_button_.y() + setting_button_.height() + collector_window_button_interval,
                              collector_window_exitbutton_width, collector_window_exitbutton_height);
+    connect(&exit_button_, &QPushButton::clicked, this, &BeginWidget::OnClickExitButton);
+}
+
+void BeginWidget::OnClickExitButton() {
+    emit ClickExitButton();
 }
 
     

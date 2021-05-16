@@ -14,14 +14,17 @@
 namespace game_collector {
 
 class BeginWidget : public QWidget {
+    Q_OBJECT
 public:
     BeginWidget() {
         Init();
     }
 
-    QPushButton* GetExitButton() {
-        return &exit_button_;
-    }
+signals:
+    void ClickExitButton();
+
+private slots:
+    void OnClickExitButton();
 
 private:
     void Init();
