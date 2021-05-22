@@ -3,12 +3,13 @@
 //
 
 #include "QWidget"
-#include "QPushButton"
 #include "QLabel"
 #include "GameConstData.h"
 #include "vector"
 #include "iostream"
 #include "algorithm"
+
+#include "SelectGameButton.h"
 
 #ifndef GAMECOLLECTOR_SELECTGAMEWIDGET_H
 #define GAMECOLLECTOR_SELECTGAMEWIDGET_H
@@ -36,6 +37,7 @@ private slots:
     void OnClickPrevPageButton();
     void OnClickNextPageButton();
     void OnClickReturnButton();
+    void HideSelf();
 
 private:
     void Init();
@@ -61,7 +63,7 @@ private:
     QPushButton return_button_;
     QPushButton prev_page_button_;
     QPushButton next_page_button_;
-    std::vector<QPushButton*> vec_games_button_;
+    std::vector<SelectGameButton*> vec_games_button_;
     QLabel title_label_;
 };
 

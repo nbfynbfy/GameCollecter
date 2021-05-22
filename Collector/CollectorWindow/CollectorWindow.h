@@ -16,6 +16,7 @@ class CollectorWindow : public QMainWindow {
 public:
     CollectorWindow() {
         Init();
+        std::cout << "CollectorWindow" << this << std::endl;
     }
 
 private slots:

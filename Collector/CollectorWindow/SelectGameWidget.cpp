@@ -86,11 +86,12 @@ void SelectGameWidget::InitGamesButton() {
         for (int x = prev_page_button_.x() + prev_page_button_.width() + selectgame_widget_gamebutton_interval;
              x + selectgame_widget_gamebutton_width < next_page_button_.x() - selectgame_widget_gamebutton_interval;
              x += selectgame_widget_gamebutton_width + selectgame_widget_gamebutton_interval) {
-            QPushButton* game_button = new QPushButton(this);
+            auto* game_button = new SelectGameButton(vec_games_button_.size() + 1,this);
             vec_games_button_.push_back(game_button);
             QFont game_button_font("Timers", 40, QFont::Bold);
             game_button->setFont(game_button_font);
             game_button->setGeometry(x, y, selectgame_widget_gamebutton_width, selectgame_widget_gamebutton_height);
+            connect(game_button, &SelectGameButton::HideParent, this, &SelectGameWidget::HideSelf);
 //            std::cout << "x = " << x << ",y = " << y << std::endl;
         }
     }
@@ -132,6 +133,10 @@ void SelectGameWidget::OnClickNextPageButton() {
 void SelectGameWidget::OnClickReturnButton() {
     this->hide();
     emit ReturnBeginWidget();
+}
+
+void SelectGameWidget::HideSelf() {
+    this->hide();
 }
 
 } // namespace game_collector

@@ -31,7 +31,7 @@ const int selectgame_widget_gamebutton_width = 200;
 const int selectgame_widget_gamebutton_height = 200;
 const int selectgame_widget_gamebutton_interval = 25;
 const int all_games_number = 24;
-const std::string games_name[100] = {"1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", };
+const std::string games_name[100] = {"打飞机", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", "1", "2", "3", "4", "5", "6", };
 
 } // namespace game_collector
 

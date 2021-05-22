@@ -13,10 +13,16 @@ find_package(Qt5 COMPONENTS Widgets)
 
 set(INCLUDES Games)
 set(INCLUDES ${INCLUDES} Collector/CollectorWindow)
+set(INCLUDES ${INCLUDES} Collector/CollectorButton)
 set(INCLUDES ${INCLUDES} Data/ConstData)
+set(INCLUDES ${INCLUDES} Games/AirplaneGame)
+set(INCLUDES ${INCLUDES} Games/Common)
 
 aux_source_directory(Games  SRCS)
 aux_source_directory(Collector/CollectorWindow  SRCS)
+aux_source_directory(Collector/CollectorButton  SRCS)
+aux_source_directory(Games/AirplaneGame  SRCS)
+aux_source_directory(Games/Common  SRCS)
 
 include_directories(${INCLUDES})
 
