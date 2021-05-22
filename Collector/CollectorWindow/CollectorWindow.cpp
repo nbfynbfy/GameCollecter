@@ -44,7 +44,7 @@ void CollectorWindow::BeginWidgetExitWindow() {
 
 void CollectorWindow::BeginWidgetToSelectGameWidget() {
     begin_widget_.hide();
-
+    select_game_widget_.UpdateGamesButton();
     select_game_widget_.show();
 }
 
